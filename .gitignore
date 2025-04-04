@@ -1,0 +1,88 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django migrations
+*/migrations/
+!*/migrations/__init__.py
+
+# SQLite database (or other dev dbs)
+*.sqlite3
+
+# Secrets and environment variables
+.env
+*.env
+.env.*
+
+# Django media / static (generated) files
+/media/
+/staticfiles/
+/static_root/
+/media_root/
+
+# Logs
+*.log
+
+# Local settings
+local_settings.py
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs (PyCharm etc.)
+.idea/
+
+# macOS
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.manifest
+*.spec
+
+# Node (if using with frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sphinx documentation
+docs/_build/
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Docker
+*.pid
