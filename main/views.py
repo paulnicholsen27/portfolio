@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import JsonResponse
-from .ai_chatbot import query_chatbot
+from .aws_scripts.ai_chatbot import query_chatbot
 
 def chat_api(request):
     if request.method == 'POST':
