@@ -1,54 +1,56 @@
-// src/components/Chatbot.js
-
 import React, { useState } from 'react';
+import { TextField, Button, Container, Typography, FormControlLabel, Switch } from '@mui/material';
 import axios from 'axios';
 
 const Chatbot = () => {
     const [question, setQuestion] = useState('');
-    const [answer, setAnswer] = useState('');
+    const [response, setResponse] = useState('');
+    const [pirateMode, setPirateMode] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
 
-    const handleInputChange = (event) => {
-        setQuestion(event.target.value);
-    };
+    const handleInputChange = (e) => setQuestion(e.target.value);
+    const handlePirateModeChange = (e) => setPirateMode(e.target.checked);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         setLoading(true);
-        setError('');
         try {
-            // Make a GET request to Django backend
-            const response = await axios.get('http://localhost:8000/chatbot?question=' + encodeURIComponent(question));
-
-            setAnswer(response.data.answer); // Set the response from Django
+            const res = await axios.get(`http://localhost:8000/chatbot?question=${encodeURIComponent(question)}&pirate_mode=${encodeURIComponent(pirateMode)}`);
+            setResponse(res.data.answer);
         } catch (error) {
-            setError('Error fetching response from chatbot.'); // Handle errors
+            setResponse('Error fetching response from chatbot.');
         }
         setLoading(false);
     };
 
     return (
-        <div>
-            <h1>Chat with Our Bot</h1>
+        <Container maxWidth="sm" sx={{ marginTop: 4 }}>
+            <Typography variant="h4" gutterBottom>
+                Chat with the Bot
+            </Typography>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="question">Ask a Question:</label>
-                    <input
-                        type="text"
-                        id="question"
-                        value={question}
-                        onChange={handleInputChange}
-                        placeholder="Type your question here"
-                    />
-                </div>
+                <TextField
+                    label="Ask a Question"
+                    variant="outlined"
+                    fullWidth
+                    value={question}
+                    onChange={handleInputChange}
+                    sx={{ marginBottom: 2 }}
+                />
+                <FormControlLabel
+                    control={<Switch checked={pirateMode} onChange={handlePirateModeChange} />}
+                    label="Pirate Mode"
+                />
                 <button type="submit" disabled={loading}>Ask</button>
             </form>
-
             {loading && <p>Loading...</p>}
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            {answer && <div><h2>Answer:</h2><p>{answer}</p></div>}
-        </div>
+
+            {response && (
+                <Typography variant="body1" sx={{ marginTop: 2 }}>
+                    {response}
+                </Typography>
+            )}
+        </Container>
     );
 };
 
