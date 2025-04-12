@@ -3,7 +3,7 @@ const INFO = {
 		title: "Paul Nicholsen's Portfolio",
 		name: "Paul Nicholsen",
 		email: "paulnicholsen27@gmail.com",
-		logo: "../logo.jpg",
+		logo: "../logo.png",
 	},
 
 	socials: {
