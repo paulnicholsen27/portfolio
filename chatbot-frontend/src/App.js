@@ -19,7 +19,7 @@ export default function PortfolioSite() {
       <section className="text-center py-20 bg-gradient-to-b from-gray-100 to-white">
         <div className="max-w-2xl mx-auto">
           <img
-            src="/path-to-your-headshot.jpg"
+            src="profile.jpeg"
             alt="Headshot"
             className="w-32 h-32 rounded-full mx-auto mb-4 shadow-md object-cover"
           />
