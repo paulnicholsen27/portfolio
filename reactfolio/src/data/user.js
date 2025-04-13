@@ -4,6 +4,7 @@ const INFO = {
 		name: "Paul Nicholsen",
 		email: "paulnicholsen27@gmail.com",
 		logo: "../logo.png",
+		pirate_logo: "../pirate.png"
 	},
 
 	socials: {

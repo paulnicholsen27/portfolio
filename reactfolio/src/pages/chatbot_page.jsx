@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
@@ -12,6 +12,12 @@ import SEO from "../data/seo";
 import "./styles/chatbot.css";
 
 const ChatbotPage = () => {
+	const [pirateMode, setPirateMode] = useState(false);
+	
+	const togglePirateMode = (checked) => {
+		setPirateMode(checked);
+	};
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -34,11 +40,11 @@ const ChatbotPage = () => {
 				<div className="content-wrapper">
 					<div className="chatbot-logo-container">
 						<div className="chatbot-logo">
-							<Logo width={46} />
+							<Logo width={46} pirateMode={pirateMode} />
 						</div>
 					</div>
 					<div className="chatbot-container">
-						<Chatbot />
+						<Chatbot pirateMode={pirateMode} onPirateModeChange={togglePirateMode} />
 					</div>
 					<div className="page-footer">
 						<Footer />

@@ -3,14 +3,17 @@ import axios from 'axios';
 import { motion } from 'framer-motion'; // Import for animation
 import './styles/chatbot.css';
 
-const Chatbot = () => {
+const Chatbot = ({ pirateMode, onPirateModeChange }) => {
   const [question, setQuestion] = useState('');
   const [response, setResponse] = useState('');
-  const [pirateMode, setPirateMode] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => setQuestion(e.target.value);
-  const handlePirateModeChange = (e) => setPirateMode(e.target.checked);
+
+  const togglePirateMode = (e) => {
+    const isChecked = e.target.checked;
+    onPirateModeChange(isChecked); 
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +31,7 @@ const Chatbot = () => {
 
   return (
     <motion.div className="chatbot-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-      <h2 className="chatbot-title">Ask me anything!  My autobot will tell you all about me.</h2>
+      <h2 className="chatbot-title">Ask me anything! My autobot will tell you all about me.</h2>
       <form onSubmit={handleSubmit} className="chatbot-form">
         <input
           type="text"
@@ -38,7 +41,7 @@ const Chatbot = () => {
           className="chatbot-input"
         />
         <label className="chatbot-switch">
-          <input type="checkbox" checked={pirateMode} onChange={handlePirateModeChange} />
+          <input type="checkbox" checked={pirateMode} onChange={togglePirateMode} />
           <span className="chatbot-slider"></span>
           <span className="chatbot-label">Pirate Mode</span>
         </label>
