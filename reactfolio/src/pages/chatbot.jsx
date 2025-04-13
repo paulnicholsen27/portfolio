@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { motion } from 'framer-motion'; // Import for animation
 import './styles/chatbot.css';
-
 
 const Chatbot = () => {
   const [question, setQuestion] = useState('');
@@ -27,7 +27,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="chatbot-wrapper">
+    <motion.div className="chatbot-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <h2 className="chatbot-title">Chat with the Bot</h2>
       <form onSubmit={handleSubmit} className="chatbot-form">
         <input
@@ -37,20 +37,17 @@ const Chatbot = () => {
           onChange={handleInputChange}
           className="chatbot-input"
         />
-
         <label className="chatbot-switch">
           <input type="checkbox" checked={pirateMode} onChange={handlePirateModeChange} />
           <span className="chatbot-slider"></span>
           <span className="chatbot-label">Pirate Mode</span>
         </label>
-
         <button type="submit" disabled={loading} className="chatbot-button">
           {loading ? 'Asking...' : 'Ask'}
         </button>
       </form>
-
       {response && <p className="chatbot-response">{response}</p>}
-    </div>
+    </motion.div>
   );
 };
 

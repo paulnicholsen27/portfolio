@@ -27,3 +27,149 @@
 		padding-top: 60px;
 	}
 }
+
+/* General chatbot styles */
+.chatbot-wrapper {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.chatbot-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.chatbot-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatbot-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.chatbot-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.chatbot-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.chatbot-switch input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.chatbot-slider {
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-slider:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease;
+  left: 4px;
+  top: 2px;
+}
+
+.chatbot-switch input:checked + .chatbot-slider {
+  background-color: #28a745;
+}
+
+.chatbot-switch input:checked + .chatbot-slider:before {
+  transform: translateX(30px);
+}
+
+.chatbot-label {
+  font-size: 16px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.chatbot-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-button:disabled {
+  background-color: #aaa;
+}
+
+.chatbot-button:hover {
+  background-color: #0056b3;
+}
+
+.chatbot-response {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Pirate Mode */
+.pirate-mode .chatbot-wrapper {
+  background-color: #ffd700;
+}
+
+.pirate-mode .chatbot-title {
+  color: #8b4513;
+  font-family: 'Pirata One', cursive;
+}
+
+.pirate-mode .chatbot-input {
+  background-color: #f0e68c;
+  border-color: #8b4513;
+}
+
+.pirate-mode .chatbot-input:focus {
+  border-color: #ff4500;
+}
+
+.pirate-mode .chatbot-button {
+  background-color: #8b4513;
+}
+
+.pirate-mode .chatbot-button:hover {
+  background-color: #cd853f;
+}
