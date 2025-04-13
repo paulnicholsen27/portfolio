@@ -28,7 +28,7 @@ const Chatbot = () => {
 
   return (
     <motion.div className="chatbot-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-      <h2 className="chatbot-title">Chat with the Bot</h2>
+      <h2 className="chatbot-title">Ask me anything!  My autobot will tell you all about me.</h2>
       <form onSubmit={handleSubmit} className="chatbot-form">
         <input
           type="text"

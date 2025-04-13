@@ -38,11 +38,6 @@ const ChatbotPage = () => {
 						</div>
 					</div>
 					<div className="chatbot-container">
-						<div className="title chatbot-title">
-							Things I’ve made trying to put my dent in the
-							universe.
-						</div>
-
 						<Chatbot />
 					</div>
 					<div className="page-footer">
