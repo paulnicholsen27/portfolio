@@ -16,10 +16,10 @@ const Footer = () => {
 							<Link to="/about">About</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/projects">Projects</Link>
+							<Link to="/chat">Chat</Link>
 						</li>
 						<li className="footer-nav-link-item">
-							<Link to="/resume">Resumes</Link>
+							<Link to="/resume">Resume</Link>
 						</li>
 						<li className="footer-nav-link-item">
 							<Link to="/contact">Contact</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						© 2023 Tharindu.dev. All Rights Reserved.
+						© 2025 Paul Nicholsen. All Rights Reserved.
 					</div>
 				</div>
 			</div>
