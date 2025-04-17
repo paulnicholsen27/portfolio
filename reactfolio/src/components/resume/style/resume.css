@@ -31,21 +31,27 @@
 .resume-date {
 	padding-top: 30px;
 	font-size: 15px;
-	color: var(--tertiary-color);
+	color: var(--secondary-color);
 }
 
 .resume-title {
 	color: #000000;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 600;
+	margin: 0 auto;
+}
+
+.resume-subtitle {
+	margin: 0 auto;
 }
 
 .resume-description {
 	padding-top: 10px;
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--secondary-color);
 	font-weight: 480;
 	line-height: 25px;
+
 }
 
 .resume-link {

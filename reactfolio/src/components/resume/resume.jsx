@@ -8,7 +8,6 @@ import "./style/resume.css";
 const Resume = (props) => {
 	const { date, title, description, link } = props;
 
-	console.log("description prop:", description);
 	const description_list = () => (
 		<ul>
 
