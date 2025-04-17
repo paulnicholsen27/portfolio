@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/article.css";
+import "./styles/resume.css";
 
-const Article = (props) => {
+const Resume = (props) => {
 	const { title, description, date } = props;
 
 	return (
 		<React.Fragment>
-			<div className="homepage-article">
-				<div className="homepage-article-content">
-					<div className="homepage-article-date">
+			<div className="homepage-resume">
+				<div className="homepage-resume-content">
+					<div className="homepage-resume-date">
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
-					<div className="homepage-article-title">{title}</div>
-					<div className="homepage-article-description">
+					<div className="homepage-resume-title">{title}</div>
+					<div className="homepage-resume-description">
 						{description}
 					</div>
 				</div>
@@ -26,4 +26,4 @@ const Article = (props) => {
 	);
 };
 
-export default Article;
+export default Resume;

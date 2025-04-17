@@ -1,10 +1,10 @@
-.articles-logo-container {
+.resume-logo-container {
 	display: flex;
 	justify-content: left;
 	padding-top: 25px;
 }
 
-.articles-logo {
+.resume-logo {
 	display: flex;
 	position: fixed;
 	border: 1px solid white;
@@ -13,7 +13,7 @@
 	top: 4vh;
 }
 
-.articles-main-container {
+.resume-main-container {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -21,19 +21,19 @@
 	padding-top: 120px;
 }
 
-.articles-container {
+.resume-container {
 	display: flex;
 	flex-direction: column;
 }
 
-.articles-wrapper {
+.resume-wrapper {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 }
 
-.articles-article {
+.resume-resume {
 	padding-top: 0px;
 	padding-left: 35px;
 	padding-bottom: 20px;
@@ -42,11 +42,11 @@
 }
 
 @media (max-width: 1024px) {
-	.articles-title {
+	.resume-title {
 		width: 100% !important;
 	}
 
-	.articles-subtitle {
+	.resume-subtitle {
 		width: 100% !important;
 	}
 }

@@ -78,13 +78,13 @@
 	padding-top: 40px;
 }
 
-.homepage-articles {
+.homepage-resume {
 	flex-basis: 900px;
 	padding-top: 30px;
 	margin-left: -30px;
 }
 
-.homepage-article {
+.homepage-resume {
 	padding-bottom: 5px;
 }
 
@@ -138,7 +138,7 @@
 		flex-basis: auto;
 	}
 
-	.homepage-articles {
+	.homepage-resume {
 		flex-basis: auto;
 	}
 

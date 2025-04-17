@@ -1,4 +1,4 @@
-function article_1() {
+function resume_1() {
 	return {
 		date: "July 2023 - Present",
 		title: "L7 Informatics - Director of Training",
@@ -12,7 +12,7 @@ function article_1() {
 			"Paul N",
 		],
 		style: `
-				.article-content {
+				.resume-content {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -21,7 +21,7 @@ function article_1() {
 	};
 }
 
-function article_2() {
+function resume_2() {
 	return {
 		date: "August 2022 - July 2023",
 		title: "Palantir - Training Delivery Manager",
@@ -35,7 +35,7 @@ function article_2() {
 	};
 }
 
-function article_3() {
+function resume_3() {
 	return {
 		date: "November 2020 - August 2022",
 		title: "Amazon Web Services — Technical Trainer",
@@ -48,7 +48,7 @@ function article_3() {
 	};
 }
 
-function article_4() {
+function resume_4() {
 	return {
 		date: "March 2018 - November 2020",
 		title: "Flatiron School — Senior Lead Instructor",
@@ -61,7 +61,7 @@ function article_4() {
 	};
 }
 
-function article_5() {
+function resume_5() {
 	return {
 		date: "January 2016 - March 2018",
 		title: "Library of Congress — Backend Developer",
@@ -74,7 +74,7 @@ function article_5() {
 	};
 }
 
-function article_6() {
+function resume_6() {
 	return {
 		date: "October 2014 - December 2016",
 		title: "Atlantic Media — Fullstack Developer",
@@ -87,7 +87,7 @@ function article_6() {
 	};
 }
 
-function article_7() {
+function resume_7() {
 	return {
 		date: "January 2011 - October 2014",
 		title: "Dow Jones — Backend Developer",
@@ -100,7 +100,7 @@ function article_7() {
 	};
 }
 
-function article_8() {
+function resume_8() {
 	return {
 		date: "June 2008 - June 2014",
 		title: "MS104, New York, NY — Middle School Math Teacher",
@@ -112,6 +112,6 @@ function article_8() {
 		],
 	};
 }
-const myArticles = [article_1, article_2, article_3, article_4, article_5, article_6, article_7, article_8];
+const myResumes = [resume_1, resume_2, resume_3, resume_4, resume_5, resume_6, resume_7, resume_8];
 
-export default myArticles;
+export default myResumes;

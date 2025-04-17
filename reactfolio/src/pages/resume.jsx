@@ -4,20 +4,20 @@ import { Helmet } from "react-helmet";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
-import Article from "../components/articles/article";
+import Resume from "../components/resume/resume";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/resume";
+import myResumes from "../data/resume";
 
-import "./styles/articles.css";
+import "./styles/resume.css";
 
-const Resume = () => {
+const ResumePage = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "articles");
+	const currentSEO = SEO.find((item) => item.page === "resume");
 
 	return (
 		<React.Fragment>
@@ -31,38 +31,38 @@ const Resume = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="articles" />
+				<NavBar active="resume" />
 				<div className="content-wrapper">
-					<div className="articles-logo-container">
-						<div className="articles-logo">
+					<div className="resume-logo-container">
+						<div className="resume-logo">
 							<Logo width={46} />
 						</div>
 					</div>
 
-					<div className="articles-main-container">
-						<div className="title articles-title">
-							{INFO.articles.title}
+					<div className="resume-main-container">
+						<div className="title resume-title">
+							{INFO.resume.title}
 						</div>
-						<div className="subtitle articles-subtitle">
-						{INFO.articles.descriptionText}
-						<a href={INFO.articles.descriptionLink.href}>
-							{INFO.articles.descriptionLink.text}
+						<div className="subtitle resume-subtitle">
+						{INFO.resume.descriptionText}
+						<a href={INFO.resume.descriptionLink.href}>
+							{INFO.resume.descriptionLink.text}
 						</a>
 						</div>
 
-						<div className="articles-container">
-							<div className="articles-wrapper">
-								{myArticles.map((article, index) => (
+						<div className="resume-container">
+							<div className="resume-wrapper">
+								{myResumes.map((resume, index) => (
 									<div
-										className="articles-article"
+										className="resume-resume"
 										key={(index + 1).toString()}
 									>
-										<Article
+										<Resume
 											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
+											date={resume().date}
+											title={resume().title}
+											description={resume().description}
+											link={"/resume/" + (index + 1)}
 										/>
 									</div>
 								))}
@@ -78,4 +78,4 @@ const Resume = () => {
 	);
 };
 
-export default Resume;
+export default ResumePage;

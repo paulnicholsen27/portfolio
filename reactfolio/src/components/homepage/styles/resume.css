@@ -1,30 +1,30 @@
 @import "../../../data/styles.css";
 
-.homepage-article {
+.homepage-resume {
 	width: 90%;
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
 }
 
-.homepage-article:hover {
+.homepage-resume:hover {
 	background: #fafafa;
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
 
-.homepage-article-content {
+.homepage-resume-content {
 	padding: 30px;
 }
 
-.homepage-article-date {
+.homepage-resume-date {
 	opacity: 1;
 	color: var(--tertiary-color);
 	font-size: 12px;
 	margin-bottom: 1em;
 }
 
-.homepage-article-title {
+.homepage-resume-title {
 	opacity: 1;
 	color: var(--primary-color);
 	font-size: 16px;
@@ -32,27 +32,27 @@
 	font-weight: 700;
 }
 
-.homepage-article-description {
+.homepage-resume-description {
 	opacity: 1;
 	color: var(--secondary-color);
 	font-size: 12px;
 	line-height: 1.5;
 }
 
-.homepage-article-link {
+.homepage-resume-link {
 	opacity: 1;
 	padding-top: 20px;
 	font-size: 15px;
 	font-weight: 700;
 }
 
-.homepage-article-link a {
+.homepage-resume-link a {
 	color: var(--link-color);
 	text-decoration: none;
 }
 
 @media (max-width: 600px) {
-	.homepage-article {
+	.homepage-resume {
 		width: 100%;
 	}
 }
