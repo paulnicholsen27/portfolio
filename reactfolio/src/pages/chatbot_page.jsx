@@ -36,7 +36,7 @@ const ChatbotPage = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="chatbot" />
+				<NavBar active="chat" />
 				<div className="content-wrapper">
 					<div className="chatbot-logo-container">
 						<div className="chatbot-logo">
