@@ -8,6 +8,16 @@ import "./style/article.css";
 const Article = (props) => {
 	const { date, title, description, link } = props;
 
+	console.log("description prop:", description);
+	const description_list = () => (
+		<ul>
+
+			{description.map((item, index) => (
+				<li key={index}>{item}</li>
+			))}
+		</ul>
+	);
+	
 	return (
 		<React.Fragment>
 			<div className="article">
@@ -18,14 +28,7 @@ const Article = (props) => {
 				<Link to={link}>
 					<div className="article-right-side">
 						<div className="article-title">{title}</div>
-						<div className="article-description">{description}</div>
-						<div className="article-link">
-							Read Article{" "}
-							<FontAwesomeIcon
-								style={{ fontSize: "10px" }}
-								icon={faChevronRight}
-							/>
-						</div>
+						<div className="article-description">{description_list()}</div>
 					</div>
 				</Link>
 			</div>

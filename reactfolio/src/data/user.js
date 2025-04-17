@@ -8,24 +8,22 @@ const INFO = {
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
 		github: "https://github.com/paulnicholsen27",
 		linkedin: "https://linkedin.com/in/pnichols104",
 		instagram: "https://www.instagram.com/thumbtackthief/",
 		stackoverflow: "https://stackoverflow.com/users/1695507/thumbtackthief",
-		facebook: "https://facebook.com/",
 	},
 
 	homepage: {
 		title: "Full-stack web developer, data engineer, and crocheter.",
 		description:
-			"Hi, I’m Paul Nicholsen—equal parts learning architect, code whisperer, and AI enthusiast. I’ve spent 15+ years turning complex tech into “I get it now!” moments, leading high-impact training programs, scaling global learning strategies, and occasionally explaining AWS to my cat. Whether I’m building backend systems, mentoring developers, or designing sleek digital experiences, I bring a blend of nerdy precision and educator charm. If you’re looking for someone who can teach, lead, code, and still make a killer dad joke, you’ve found your guy.",
+			"Hi, I’m Paul Nicholsen—equal parts learning architect, code whisperer, and AI enthusiast. I’ve spent 15+ years turning complex tech into “I get it now!” moments, leading high-impact training programs, scaling global learning strategies, and occasionally explaining AWS to my cat. Whether I’m building backend systems, mentoring developers, or crunching data I bring a blend of nerdy precision and educator charm. If you’re looking for someone who can teach, lead, code, and still make a killer dad joke, you’ve found your guy.",
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "I'm Paul.  I live in the intersection of technology and education.",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"I began my career as a middle school math teacher with a Master's Degree in Education.  I eventually picked up programming as a hobby, and fell in love.  I was a full-stack developer among such notable institutions as Dow Jones, The Atlantic, and the Library of Congress (among others) until moving back into the teaching space by being the Lead Instructor at Flatiron School, a coding bootcamp, helping open a brand new campus in DC.  Since then, I have been a technical trainer for Amazon Web Services and Palantir, most recently serving as the Director of Training at L7 Informatics.",
 	},
 
 	articles: {
