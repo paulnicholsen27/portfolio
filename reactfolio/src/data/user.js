@@ -26,10 +26,13 @@ const INFO = {
 			"I began my career as a middle school math teacher with a Master's Degree in Education.  I eventually picked up programming as a hobby, and fell in love.  I was a full-stack developer among such notable institutions as Dow Jones, The Atlantic, and the Library of Congress (among others) until moving back into the teaching space by being the Lead Instructor at Flatiron School, a coding bootcamp, helping open a brand new campus in DC.  Since then, I have been a technical trainer for Amazon Web Services and Palantir, most recently serving as the Director of Training at L7 Informatics.",
 	},
 
-	articles: {
+	resume: {
 		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+		descriptionText: "My experience is listed below, or you can just ask my ",
+		descriptionLink: {
+			href: "/chat",
+			text: "AI-trained chatbot!",
+		}
 	},
 
 	projects: [

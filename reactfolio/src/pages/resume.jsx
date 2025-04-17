@@ -8,11 +8,11 @@ import Article from "../components/articles/article";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
+import myArticles from "../data/resume";
 
 import "./styles/articles.css";
 
-const Articles = () => {
+const Resume = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -22,7 +22,7 @@ const Articles = () => {
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{`Articles | ${INFO.main.title}`}</title>
+				<title>{`Resume | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
@@ -43,9 +43,11 @@ const Articles = () => {
 						<div className="title articles-title">
 							{INFO.articles.title}
 						</div>
-
 						<div className="subtitle articles-subtitle">
-							{INFO.articles.description}
+						{INFO.articles.descriptionText}
+						<a href={INFO.articles.descriptionLink.href}>
+							{INFO.articles.descriptionLink.text}
+						</a>
 						</div>
 
 						<div className="articles-container">
@@ -76,4 +78,4 @@ const Articles = () => {
 	);
 };
 
-export default Articles;
+export default Resume;
