@@ -24,7 +24,7 @@ const Chatbot = ({ pirateMode, onPirateModeChange }) => {
       );
       setResponse(res.data.answer);
     } catch (error) {
-      setResponse('Error fetching response from chatbot.');
+      setResponse(error.response.data.error);
     }
     setLoading(false);
   };
