@@ -3,9 +3,9 @@
 	"version": "1.1.0",
 	"description": "Personal portfolio template built using Reactjs",
 	"author": {
-		"name": "Tharindu N. Madhusanka",
-		"email": "mail@tharindu.dev",
-		"url": "https://tharindu.dev"
+		"name": "Paul Nicholsen",
+		"email": "paulnicholsen27@gmail.com",
+		"url": "https://github.com/paulnicholsen27/portfolio"
 	},
 	"license": "MIT",
 	"private": true,
