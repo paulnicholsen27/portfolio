@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
 	faGithub,
 	faStackOverflow,
 	faInstagram,
@@ -13,13 +12,9 @@ import {
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Resume from "../components/homepage/resume";
-import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myResumes from "../data/resume";
 
 import "./styles/homepage.css";
 
