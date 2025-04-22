@@ -20,7 +20,7 @@ const Chatbot = ({ pirateMode, onPirateModeChange }) => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:8000/chatbot?question=${encodeURIComponent(question)}&pirate_mode=${encodeURIComponent(pirateMode)}`
+        `https://portfolio-production-60e4.up.railway.app/chatbot?question=${encodeURIComponent(question)}&pirate_mode=${encodeURIComponent(pirateMode)}`
       );
       setResponse(res.data.answer);
     } catch (error) {
