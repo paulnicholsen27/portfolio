@@ -86,3 +86,6 @@ celerybeat-schedule
 
 # Docker
 *.pid
+
+# Local Netlify folder
+.netlify
