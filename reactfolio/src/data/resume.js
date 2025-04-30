@@ -89,7 +89,7 @@ function resume_6() {
 
 function resume_7() {
 	return {
-		date: "January 2011 - October 2014",
+		date: "January 2013 - October 2014",
 		title: "Dow Jones — Backend Developer",
 		description: ["Developed a comprehensive Configuration Management Database(CMDB) using Django, providing internal teams with a robust asset management solution.", "Designed and implemented onboarding programs for new developers, accelerating integration and enhancing team productivity."],
 		style: ``,
@@ -102,7 +102,7 @@ function resume_7() {
 
 function resume_8() {
 	return {
-		date: "June 2008 - June 2014",
+		date: "June 2008 - June 2012",
 		title: "MS104, New York, NY — Middle School Math Teacher",
 		description: ["Designed and implemented engaging, standards-aligned math lessons that improved student proficiency by 20% over the academic year.", "Utilized data-driven instruction and formative assessments to tailor support for diverse learners, including IEP and ELL students.", "Fostered a positive classroom environment that encouraged mathematical thinking, collaboration, and growth mindset."],
 		style: ``,
