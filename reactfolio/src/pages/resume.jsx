@@ -62,7 +62,6 @@ const ResumePage = () => {
 											date={resume().date}
 											title={resume().title}
 											description={resume().description}
-											link={"/resume/" + (index + 1)}
 										/>
 									</div>
 								))}

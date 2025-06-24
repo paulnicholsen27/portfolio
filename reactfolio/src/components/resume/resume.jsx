@@ -22,12 +22,10 @@ const Resume = (props) => {
 					<div className="resume-date">{date}</div>
 				</div>
 
-				<Link to={link}>
 					<div className="resume-right-side">
 						<div className="resume-title">{title}</div>
 						<div className="resume-description">{description_list()}</div>
 					</div>
-				</Link>
 			</div>
 		</React.Fragment>
 	);
