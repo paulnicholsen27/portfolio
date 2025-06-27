@@ -27,11 +27,12 @@ COPY . .
 WORKDIR /app/reactfolio
 RUN echo "🛠 Starting React build" && \
     npm install && \
-    npm run build && \
+    npm run build --verbose && \
     echo "✅ React build completed" && \
     echo "📁 Contents of /app/reactfolio:" && ls -la /app/reactfolio && \
     echo "📁 Contents of /app/reactfolio/build:" && ls -la /app/reactfolio/build && \
     echo "📁 Contents of /app/reactfolio/build/static:" && ls -la /app/reactfolio/build/static || true
+
 
 
 # Return to the Django project root (where manage.py lives)
