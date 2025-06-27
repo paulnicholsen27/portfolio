@@ -3,7 +3,7 @@ import React from "react";
 import "./style/resume.css";
 
 const Resume = (props) => {
-	const { date, title, description, link } = props;
+	const { date, title, description } = props;
 
 	const description_list = () => (
 		<ul>
