@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /app
 
-# Install system dependencies (includes Node.js + npm)
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the full project (both Django and React)
+# Copy the entire project
 COPY . .
 
 # Build the React frontend
@@ -28,8 +28,8 @@ WORKDIR /app/reactfolio
 RUN npm install
 RUN npm run build
 
-# Move back to Django app directory
-WORKDIR /app/portfolio
+# Return to the Django project root (where manage.py lives)
+WORKDIR /app
 
 # Collect static files
 RUN python manage.py collectstatic --noinput
