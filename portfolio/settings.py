@@ -141,7 +141,7 @@ STATICFILES_DIRS = [
 ]
 
 
-TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'portfolio/static')]
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, "reactfolio/build")]
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent

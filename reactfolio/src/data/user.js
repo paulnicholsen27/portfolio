@@ -28,7 +28,7 @@ const INFO = {
 
 	resume: {
 		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-		descriptionText: "My experience is listed below, or you can just ask my ",
+		descriptionText: "My experience is listed below, or I built a helpful  ",
 		descriptionLink: {
 			href: "/chat",
 			text: "AI-trained chatbot!",
