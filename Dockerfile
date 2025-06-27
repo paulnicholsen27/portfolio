@@ -41,4 +41,5 @@ ENV DJANGO_SETTINGS_MODULE=portfolio.settings
 CMD ["gunicorn", "portfolio.wsgi:application", "--bind", "0.0.0.0:8000"]
 
 RUN echo "REACT"
-RUN ls -l /app/reactfolio/build
+RUN ls -la /app/reactfolio/build
+RUN ls -la /app/reactfolio/build/static
