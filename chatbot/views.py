@@ -23,12 +23,3 @@ def chatbot(request):
     else:
         return JsonResponse({'error': 'Error fetching answer from chatbot.  Even artificial intelligence can be dumb sometimes.'}, status=500)
 
-class ReactAppView(TemplateView):
-    template_name = "index.html"
-
-import os
-from django.http import HttpResponse
-from django.conf import settings
-
-def test_view(request):
-    return HttpResponse("Hello from Django! Code changes are live.")
