@@ -4,6 +4,7 @@ FROM python:3.11-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV DJANGO_SETTINGS_MODULE=portfolio.settings
 
 # Set work directory
 WORKDIR /app
@@ -20,35 +21,21 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the entire project
+# Copy the full project into the container
 COPY . .
 
+# Build the React frontend
 WORKDIR /app/reactfolio
-RUN echo "🛠 Starting React build" && \
-    npm install && \
-    npm run build && \
-    echo "✅ React build completed" && \
-    echo "📁 Listing contents:" && \
-    ls -la /app/reactfolio && \
-    ls -la /app/reactfolio/build && \
-    ls -la /app/reactfolio/build/static && \
-    echo "🧪 End of build phase — this should run" && \
-    false
+RUN npm install && npm run build
 
-
-
-# Return to the Django project root (where manage.py lives)
+# Copy React build into Django static directory
 WORKDIR /app
+RUN mkdir -p /app/portfolio/static && \
+    cp -r /app/reactfolio/build/* /app/portfolio/static/
 
-# Collect static files
+# Collect Django static files
+WORKDIR /app
 RUN python manage.py collectstatic --noinput
 
-# Set Django settings module
-ENV DJANGO_SETTINGS_MODULE=portfolio.settings
-
-# Start the application with Gunicorn
+# Start the Django app with Gunicorn
 CMD ["gunicorn", "portfolio.wsgi:application", "--bind", "0.0.0.0:8000"]
-
-RUN echo "REACT"
-RUN ls -la /app/reactfolio/build
-RUN ls -la /app/reactfolio/build/static
