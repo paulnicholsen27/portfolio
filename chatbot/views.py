@@ -5,6 +5,7 @@ from rest_framework import status
 from .utils import generate_answer 
 import requests
 from django.http import JsonResponse
+from django.views.generic import TemplateView
 
 def chatbot(request):
     question = request.GET.get('question', '')
@@ -21,3 +22,6 @@ def chatbot(request):
         return JsonResponse({'answer': data.get('answer')})
     else:
         return JsonResponse({'error': 'Error fetching answer from chatbot.  Even artificial intelligence can be dumb sometimes.'}, status=500)
+
+class ReactAppView(TemplateView):
+    template_name = "index.html"

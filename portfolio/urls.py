@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import re_path
+from .views import ReactAppView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chatbot.urls')),
+    re_path(r'^.*$', ReactAppView.as_view(), name="react-app"),
 ]
