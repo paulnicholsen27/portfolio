@@ -88,6 +88,7 @@ const Homepage = () => {
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
 									{INFO.homepage.title}
+									{console.log("🚀 New build deployed!")}
 								</div>
 
 								<div className="subtitle homepage-subtitle">
