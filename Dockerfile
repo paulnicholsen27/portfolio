@@ -23,15 +23,17 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy the entire project
 COPY . .
 
-# Build the React frontend
 WORKDIR /app/reactfolio
 RUN echo "🛠 Starting React build" && \
     npm install && \
-    npm run build --verbose && \
+    npm run build && \
     echo "✅ React build completed" && \
-    echo "📁 Contents of /app/reactfolio:" && ls -la /app/reactfolio && \
-    echo "📁 Contents of /app/reactfolio/build:" && ls -la /app/reactfolio/build && \
-    echo "📁 Contents of /app/reactfolio/build/static:" && ls -la /app/reactfolio/build/static || true
+    echo "📁 Listing contents:" && \
+    ls -la /app/reactfolio && \
+    ls -la /app/reactfolio/build && \
+    ls -la /app/reactfolio/build/static && \
+    echo "🧪 End of build phase — this should run" && \
+    false
 
 
 
