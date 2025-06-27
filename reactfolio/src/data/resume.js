@@ -1,6 +1,6 @@
 function resume_0() {
 	return {
-		date: "January 2025 - present",
+		date: "October 2024 - present",
 		title: "Axle Informatics - Data Engineer",
 		description: [`Built scalable ETL pipelines in Palantir Foundry to integrate multi-source biomedical data for NIH research teams.`,
 			`Optimized data transformation workflows, reducing processing time by 40% for large-scale genomic and clinical datasets.`,
@@ -23,7 +23,7 @@ function resume_0() {
 
 function resume_1() {
 	return {
-		date: "July 2023 - January 2025",
+		date: "July 2023 - October 2024",
 		title: "L7 Informatics - Director of Training",
 		description: [`Developed and executed a next-gen training strategy that improved customer satisfaction by 40%, reducing live training sessions by 30% through self-service digital learning platforms.`,
 		`Led a team of 3 training specialists to design and deliver customer leadership programs, integrating AI-driven tools to provide personalized learning experiences.`,
