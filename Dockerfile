@@ -26,7 +26,12 @@ COPY . .
 # Build the React frontend
 WORKDIR /app/reactfolio
 RUN npm install
-RUN npm run build
+RUN echo "🛠 Starting React build" \
+ && npm run build || (echo "❌ React build failed!" && exit 1) \
+ && echo "✅ React build completed" \
+ && ls -la /app/reactfolio \
+ && ls -la /app/reactfolio/build \
+ && ls -la /app/reactfolio/build/static
 
 # Return to the Django project root (where manage.py lives)
 WORKDIR /app
