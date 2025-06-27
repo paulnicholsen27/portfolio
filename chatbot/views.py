@@ -45,3 +45,7 @@ def react_build_info(request):
         <p>index.html last modified: {modified_time}</p>
         <pre>{content}</pre>
     """)
+
+
+def test_view(request):
+    return HttpResponse("Hello from Django! Code changes are live.")
