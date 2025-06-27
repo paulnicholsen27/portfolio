@@ -21,8 +21,6 @@ from chatbot.views import ReactAppView, react_build_info, test_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test-view/', test_view),
-    path('react-build-info/', react_build_info),
     path('', include('chatbot.urls')),
     re_path(r'^.*$', ReactAppView.as_view(), name="react-app"),
     

@@ -30,22 +30,5 @@ import os
 from django.http import HttpResponse
 from django.conf import settings
 
-def react_build_info(request):
-    index_path = os.path.join(settings.STATIC_ROOT, 'index.html')
-    if not os.path.exists(index_path):
-        return HttpResponse("index.html not found in STATIC_ROOT")
-
-    modified_time = os.path.getmtime(index_path)
-
-    with open(index_path, 'r') as f:
-        content = f.read(500)  # Read first 500 chars only
-
-    return HttpResponse(f"""
-        <h1>React build info</h1>
-        <p>index.html last modified: {modified_time}</p>
-        <pre>{content}</pre>
-    """)
-
-
 def test_view(request):
     return HttpResponse("Hello from Django! Code changes are live.")
